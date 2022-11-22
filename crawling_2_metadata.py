@@ -23,6 +23,7 @@ BASE_DIR = "crawling/"
 with open(
     os.path.join(BASE_DIR, "crawling_1_url.json"), "r", encoding="UTF-8"
 ) as json_file:
+
     json_file = json.load(json_file)
 
 
