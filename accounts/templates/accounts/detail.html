@@ -10,7 +10,7 @@
     }
 
     .backdrop {
-      background-color: rgba(0, 0, 0, 0.1);
+      background-color: rgba(1, 0, 0, 0.217);
       backdrop-filter: blur(1rem);
     }
 
@@ -34,7 +34,7 @@
       <div class="background-image-blur profile-card-shadow" style="background-image: url(' {{ user.profile_image.url }}'); background-repeat: none; background-size: cover; content: '';">
         <div class=" d-flex flex-column align-items-center d-sm-none shadow-lg p-5 backdrop">
           <img src="{{ user.profile_image.url }}" class="mb-3 profile-image-border" alt="{{ user.profile_image }}">
-          <h1 class="mb-0 text-light" style="letter-spacing: -2px; mix-blend-mode: luminosity">{{ user.username }}</h1>
+          <h1 class="mb-0 mt-3 text-light" style="letter-spacing: -2px; mix-blend-mode: luminosity">{{ user.username }}</h1>
           <div class="d-flex fw-lighter align-items-center mt-1">
             <lord-icon src="https://cdn.lordicon.com/diihvcfp.json" class="me-2" trigger="hover" colors="primary:#ffffff" style="width:20px;height:20px"></lord-icon>
             <p class="mb-0 fw-normal font-space text-light">{{ user.email }}</p>
@@ -261,8 +261,8 @@
       </div>
       <!-- 찜 개수 -->
       <div class="d-flex flex-column text-center mx-3 rounded-3 shadow-lg">
-        <button class="font-space bg-dark text-white btn btn-none follow-dropdown-shadow" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 5px 20px;">
-          <lord-icon src="https://cdn.lordicon.com/xryjrepg.json" class="align-middle" trigger="hover" colors="primary:#ffffff" style="width:25px;height:25px"></lord-icon>
+        <button class="font-space bg-dark text-white align-middle btn btn-none follow-dropdown-shadow" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="padding: 5px 20px;">
+          <i class="fa-solid fa-heart"></i>
         </button>
         <!-- 찜목록 숫자 -->
         <p class="fw-bold my-1 follow-shadow text-muted">{{ user_likes|length }}</p>
@@ -382,7 +382,13 @@
         });
   </script>
   <script>
-
+    $(document).ready(function(){
+      $('.your-class').slick({
+        setting-name: setting-value
+      });
+    });
+  </script>
+  <script>
     $(function(){
       $('.center').slick({
       slide: 'a',
